@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CRACC/ViewController/MapVC/MapVC.swift"
-            timestampString = "529049442.584143"
+            timestampString = "529265783.690923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "SettingBtnPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CRACC/ViewController/MapVC/MapVC.swift"
-            timestampString = "529049442.584803"
+            timestampString = "529265783.691879"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "SettingBtnPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CRACC/ViewController/MapVC/MapVC.swift"
-            timestampString = "529049442.584866"
+            timestampString = "529265783.692761"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "UndoTheMainMapActivity()"
             landmarkType = "7">
          </BreakpointContent>
@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CRACC/ViewController/MapVC/MapVC.swift"
-            timestampString = "529049442.584915"
+            timestampString = "529265783.693566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "UndoTheMainMapActivity()"
             landmarkType = "7">
          </BreakpointContent>
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CRACC/ViewController/MapVC/MapVC.swift"
-            timestampString = "529049442.58496"
+            timestampString = "529265783.694357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "UndoTheMainMapActivity()"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,13 +410,139 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CRACC/ViewController/MapVC/MapVC.swift"
-            timestampString = "529049442.585006"
+            timestampString = "529265783.695248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "UndoTheMainMapActivity()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CRACC/ViewController/MapVC/MapVC.swift"
+            timestampString = "529265783.69607"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "MapVC"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CRACC/ViewController/MapVC/MapVC.swift"
+            timestampString = "529265783.696908"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CRACC/ViewController/MapVC/MapVC.swift"
+            timestampString = "529265783.697733"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CRACC/ViewController/MapVC/MapVC.swift"
+            timestampString = "529265783.698962"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "MapVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CRACC.MapVC.widthJoinBtn.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.NSLayoutConstraint&gt;"
+                  moduleName = "CRACC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khoinguyen/Desktop/Cracc/CRACC/CRACC/ViewController/MapVC/MapVC.swift"
+                  timestampString = "529259285.787005"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CRACC.MapVC.widthJoinBtn.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.NSLayoutConstraint&gt;"
+                  moduleName = "CRACC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khoinguyen/Desktop/Cracc/CRACC/CRACC/ViewController/MapVC/MapVC.swift"
+                  timestampString = "529259285.789638"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CRACC.MapVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; CRACC.MapVC"
+                  moduleName = "CRACC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khoinguyen/Desktop/Cracc/CRACC/CRACC/ViewController/MapVC/MapVC.swift"
+                  timestampString = "529259285.791371"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1739">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CRACC.MapVC.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;CRACC.MapVC&gt;"
+                  moduleName = "CRACC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khoinguyen/Desktop/Cracc/CRACC/CRACC/ViewController/MapVC/MapVC.swift"
+                  timestampString = "529259285.793148"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1623">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -16,6 +16,9 @@ import FirebaseDatabase
 class MapVC: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var profileView: UIView!
     
+    @IBOutlet weak var controlGameView: Modified2cornerView!
+    @IBOutlet weak var heightOfControlGameView2: NSLayoutConstraint!
+    @IBOutlet weak var heightOfControlGameView: NSLayoutConstraint!
     @IBOutlet weak var locationBtn: RoundBtn!
     @IBOutlet weak var chatView: UIView!
     @IBOutlet weak var navigationVC: UIView!
@@ -29,12 +32,32 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     
     @IBOutlet weak var GameManagementImage: UIButton!
     
+    //@IBOutlet weak var heightOfDetailView: NSLayoutConstraint!
     
+    @IBOutlet weak var widthJoinBtn: NSLayoutConstraint!
+    
+    @IBOutlet weak var heightJoinBtn: NSLayoutConstraint!
     var marker = GMSMarker()
     @objc var tapToUndo: UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        heightOfControlGameView.constant = self.view.frame.height * (359/736) + 30
+        //heightOfControlGameView2.constant = self.controlGameView.frame.height * (100/359)
+        
+        //let newHeight = heightOfControlGameView.constant
+        //print(self.view.frame.height * (359/736))
+        //print(heightOfControlGameView.constant)
+        //print(self.controlGameView.frame.height)
+        //print(newHeight)
+        
+        //heightOfDetailView.constant = newHeight * (143/359)
+        
+        //widthJoinBtn.constant = self.view.frame.width * (158/320)
+        //heightOfDetailView.constant = self.view.frame.height * (48/568)
+        
+        
         
         // declare self for all delegate function
         mapView.delegate = self
@@ -42,7 +65,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         configureLocationServices()
         
         marker.tracksInfoWindowChanges = true
-        
+        blurMap()
         
         // Do any additional setup after loading the view, typically from a nib.
     }

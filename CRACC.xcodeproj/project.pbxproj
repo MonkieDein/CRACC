@@ -12,6 +12,9 @@
 		6A44239A1F8181BB00871E54 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4423991F8181BB00871E54 /* ContainerVC.swift */; };
 		6A5C4AF71F80592C00C4591E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C4AF61F80592C00C4591E /* Constant.swift */; };
 		6A5C4AFA1F805A9100C4591E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C4AF91F805A9100C4591E /* GoogleService-Info.plist */; };
+		6AA0CF641F89544D00A88D64 /* Modified2cornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA0CF631F89544D00A88D64 /* Modified2cornerView.swift */; };
+		6AA0CF661F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA0CF651F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift */; };
+		6AAE8C761F8BD54A00C07E71 /* ModifiedBtnCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE8C751F8BD54A00C07E71 /* ModifiedBtnCorner.swift */; };
 		6AB146E01F8056B500D0D74B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB146DF1F8056B500D0D74B /* AppDelegate.swift */; };
 		6AB146E21F8056B500D0D74B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB146E11F8056B500D0D74B /* MapVC.swift */; };
 		6AB146E51F8056B500D0D74B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB146E31F8056B500D0D74B /* Main.storyboard */; };
@@ -43,6 +46,9 @@
 		6A4423991F8181BB00871E54 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		6A5C4AF61F80592C00C4591E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6A5C4AF91F805A9100C4591E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6AA0CF631F89544D00A88D64 /* Modified2cornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modified2cornerView.swift; sourceTree = "<group>"; };
+		6AA0CF651F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addBorderAndRoundedCornerImgView.swift; sourceTree = "<group>"; };
+		6AAE8C751F8BD54A00C07E71 /* ModifiedBtnCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedBtnCorner.swift; sourceTree = "<group>"; };
 		6AB146DC1F8056B500D0D74B /* CRACC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRACC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB146DF1F8056B500D0D74B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AB146E11F8056B500D0D74B /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -112,6 +118,9 @@
 				6AB69C791F82ED0D00D79BDE /* SecondModifiedView.swift */,
 				6AF4718F1F88B73700B59126 /* RoundedBtn.swift */,
 				6AF471931F88B9B000B59126 /* loginBtn.swift */,
+				6AA0CF631F89544D00A88D64 /* Modified2cornerView.swift */,
+				6AA0CF651F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift */,
+				6AAE8C751F8BD54A00C07E71 /* ModifiedBtnCorner.swift */,
 			);
 			path = ModView;
 			sourceTree = "<group>";
@@ -413,6 +422,9 @@
 				6AB69C7A1F82ED0D00D79BDE /* SecondModifiedView.swift in Sources */,
 				6AB69C731F82055E00D79BDE /* BlendedCornerView.swift in Sources */,
 				6AF4718C1F88A57700B59126 /* FirstLookVC.swift in Sources */,
+				6AA0CF641F89544D00A88D64 /* Modified2cornerView.swift in Sources */,
+				6AAE8C761F8BD54A00C07E71 /* ModifiedBtnCorner.swift in Sources */,
+				6AA0CF661F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift in Sources */,
 				6AB69C781F82EAD000D79BDE /* ModifiedCornerRariusView.swift in Sources */,
 				6AB69C761F82910B00D79BDE /* CommunityVC.swift in Sources */,
 				6A5C4AF71F80592C00C4591E /* Constant.swift in Sources */,
