@@ -14,6 +14,34 @@ import FirebaseDatabase
 
 
 class MapVC: UIViewController, GMSMapViewDelegate {
+    
+    // list btn of ProfileView
+    
+    @IBOutlet weak var createNewGameBtn2: UIButton!
+    @IBOutlet weak var InformationBtn2: UIButton!
+    @IBOutlet weak var InterestedBtn2: UIButton!
+    @IBOutlet weak var communityBtn2: UIButton!
+    @IBOutlet weak var logoutBtn2: UIButton!
+    
+    
+    // constraint for chatView
+    
+    @IBOutlet weak var bottomConstraintForChatView: NSLayoutConstraint!
+    @IBOutlet weak var leadingConstraintForChatView: NSLayoutConstraint!
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @IBOutlet weak var profileView: UIView!
     
     @IBOutlet weak var controlGameView: Modified2cornerView!
@@ -42,20 +70,14 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // setting content allignment of list button in profile view
+        SetContentAllignmenttoBtn()
         
         heightOfControlGameView.constant = self.view.frame.height * (359/736) + 30
-        //heightOfControlGameView2.constant = self.controlGameView.frame.height * (100/359)
         
-        //let newHeight = heightOfControlGameView.constant
-        //print(self.view.frame.height * (359/736))
-        //print(heightOfControlGameView.constant)
-        //print(self.controlGameView.frame.height)
-        //print(newHeight)
+        leadingConstraintForChatView.constant = self.view.frame.width * (1/2)
+        bottomConstraintForChatView.constant = self.view.frame.height * (1/2) - 75
         
-        //heightOfDetailView.constant = newHeight * (143/359)
-        
-        //widthJoinBtn.constant = self.view.frame.width * (158/320)
-        //heightOfDetailView.constant = self.view.frame.height * (48/568)
         
         
         
@@ -65,7 +87,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         configureLocationServices()
         
         marker.tracksInfoWindowChanges = true
-        blurMap()
+        //blurMap()
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -88,6 +110,15 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         }
     
         
+    }
+    
+    
+    func SetContentAllignmenttoBtn() {
+        createNewGameBtn2.contentHorizontalAlignment = .left
+        InformationBtn2.contentHorizontalAlignment = .left
+        InterestedBtn2.contentHorizontalAlignment = .left
+        communityBtn2.contentHorizontalAlignment = .left
+        logoutBtn2.contentHorizontalAlignment = .left
     }
 /*
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
@@ -207,6 +238,14 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         
         self.performSegue(withIdentifier: "goToCommunityVC", sender: nil)
     }
+    
+    @IBAction func communityBtn2Pressed(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "goToCommunityVC", sender: nil)
+
+    }
+    
+    
     @IBAction func logOutBtnPressed(_ sender: Any) {
         
         
