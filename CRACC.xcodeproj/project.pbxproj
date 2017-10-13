@@ -26,6 +26,9 @@
 		6AB69C761F82910B00D79BDE /* CommunityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB69C751F82910B00D79BDE /* CommunityVC.swift */; };
 		6AB69C781F82EAD000D79BDE /* ModifiedCornerRariusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB69C771F82EAD000D79BDE /* ModifiedCornerRariusView.swift */; };
 		6AB69C7A1F82ED0D00D79BDE /* SecondModifiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB69C791F82ED0D00D79BDE /* SecondModifiedView.swift */; };
+		6AE3F9B41F904A3200B80061 /* ModifiedInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE3F9B31F904A3200B80061 /* ModifiedInformationView.swift */; };
+		6AE3F9B61F904FFE00B80061 /* RoundedImgAndBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE3F9B51F904FFE00B80061 /* RoundedImgAndBorder.swift */; };
+		6AE3F9B81F90968000B80061 /* RoundedBtnForCreateGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE3F9B71F90968000B80061 /* RoundedBtnForCreateGame.swift */; };
 		6AF471851F889F7C00B59126 /* Myriad-Pro_31655.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AF471841F889F6A00B59126 /* Myriad-Pro_31655.ttf */; };
 		6AF471891F88A51000B59126 /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AF471881F88A51000B59126 /* MyriadPro-Bold.otf */; };
 		6AF4718C1F88A57700B59126 /* FirstLookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF4718B1F88A57700B59126 /* FirstLookVC.swift */; };
@@ -62,6 +65,9 @@
 		6AB69C751F82910B00D79BDE /* CommunityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVC.swift; sourceTree = "<group>"; };
 		6AB69C771F82EAD000D79BDE /* ModifiedCornerRariusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedCornerRariusView.swift; sourceTree = "<group>"; };
 		6AB69C791F82ED0D00D79BDE /* SecondModifiedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModifiedView.swift; sourceTree = "<group>"; };
+		6AE3F9B31F904A3200B80061 /* ModifiedInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedInformationView.swift; sourceTree = "<group>"; };
+		6AE3F9B51F904FFE00B80061 /* RoundedImgAndBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImgAndBorder.swift; sourceTree = "<group>"; };
+		6AE3F9B71F90968000B80061 /* RoundedBtnForCreateGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBtnForCreateGame.swift; sourceTree = "<group>"; };
 		6AF471841F889F6A00B59126 /* Myriad-Pro_31655.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad-Pro_31655.ttf"; sourceTree = "<group>"; };
 		6AF471881F88A51000B59126 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		6AF4718B1F88A57700B59126 /* FirstLookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLookVC.swift; sourceTree = "<group>"; };
@@ -121,6 +127,9 @@
 				6AA0CF631F89544D00A88D64 /* Modified2cornerView.swift */,
 				6AA0CF651F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift */,
 				6AAE8C751F8BD54A00C07E71 /* ModifiedBtnCorner.swift */,
+				6AE3F9B31F904A3200B80061 /* ModifiedInformationView.swift */,
+				6AE3F9B51F904FFE00B80061 /* RoundedImgAndBorder.swift */,
+				6AE3F9B71F90968000B80061 /* RoundedBtnForCreateGame.swift */,
 			);
 			path = ModView;
 			sourceTree = "<group>";
@@ -416,12 +425,15 @@
 				6AF471901F88B73700B59126 /* RoundedBtn.swift in Sources */,
 				6A44239A1F8181BB00871E54 /* ContainerVC.swift in Sources */,
 				6AB146E01F8056B500D0D74B /* AppDelegate.swift in Sources */,
+				6AE3F9B41F904A3200B80061 /* ModifiedInformationView.swift in Sources */,
 				6AB146E81F8056B500D0D74B /* CRACC.xcdatamodeld in Sources */,
 				6A44238E1F80D32800871E54 /* RoundedView.swift in Sources */,
 				6AB69C711F82023E00D79BDE /* ImageRound.swift in Sources */,
 				6AB69C7A1F82ED0D00D79BDE /* SecondModifiedView.swift in Sources */,
 				6AB69C731F82055E00D79BDE /* BlendedCornerView.swift in Sources */,
+				6AE3F9B61F904FFE00B80061 /* RoundedImgAndBorder.swift in Sources */,
 				6AF4718C1F88A57700B59126 /* FirstLookVC.swift in Sources */,
+				6AE3F9B81F90968000B80061 /* RoundedBtnForCreateGame.swift in Sources */,
 				6AA0CF641F89544D00A88D64 /* Modified2cornerView.swift in Sources */,
 				6AAE8C761F8BD54A00C07E71 /* ModifiedBtnCorner.swift in Sources */,
 				6AA0CF661F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift in Sources */,

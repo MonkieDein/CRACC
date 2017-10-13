@@ -15,6 +15,12 @@ import FirebaseDatabase
 
 class MapVC: UIViewController, GMSMapViewDelegate {
     
+    
+    // create game view
+    
+    
+    @IBOutlet weak var createGameView: ModifiedInformationView!
+    
     // list btn of ProfileView
     
     @IBOutlet weak var createNewGameBtn2: UIButton!
@@ -30,11 +36,16 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var leadingConstraintForChatView: NSLayoutConstraint!
     
     
+    @IBOutlet weak var profileBtn: RoundBtn!
+    
+    
+    @IBOutlet weak var Width1OfRatingView: NSLayoutConstraint!
+    @IBOutlet weak var with2OfRatingView: NSLayoutConstraint!
     
     
     
     
-    
+    @IBOutlet weak var InformationView: ModifiedInformationView!
     
     
     
@@ -78,7 +89,9 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         leadingConstraintForChatView.constant = self.view.frame.width * (1/2)
         bottomConstraintForChatView.constant = self.view.frame.height * (1/2) - 75
         
-        
+        Width1OfRatingView.constant = self.view.frame.width *
+            (100/414) + 19
+        with2OfRatingView.constant = self.view.frame.width * (100/414) + 19
         
         
         // declare self for all delegate function
@@ -90,6 +103,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         //blurMap()
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     func configureLocationService() {
@@ -148,9 +163,9 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         
         
         self.mapView.backgroundColor = UIColor.darkGray
-        self.mapView.alpha = 0.3
-        self.navigationVC.alpha = 0.3
-        self.locationBtn.alpha = 0.3
+        self.mapView.alpha = 0.4
+        self.navigationVC.alpha = 0.4
+        self.locationBtn.alpha = 0.4
         
         
         
@@ -163,6 +178,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.locationBtn.isUserInteractionEnabled = false
         self.chatImage.isUserInteractionEnabled = false
         self.GameManagementImage.isUserInteractionEnabled = false
+        self.profileBtn.isUserInteractionEnabled = false
         
         // hold the open
         
@@ -178,6 +194,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         self.locationBtn.isUserInteractionEnabled = true
         self.chatImage.isUserInteractionEnabled = true
         self.GameManagementImage.isUserInteractionEnabled = true
+        self.profileBtn.isUserInteractionEnabled = true
         
         // undo blur
         
@@ -189,6 +206,9 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         // hide unecessaryView
          profileView.isHidden =  true
          chatView.isHidden = true
+         InformationView.isHidden = true
+         controlGameView.isHidden = true
+         createGameView.isHidden = true
         
         // remove gesture
         
@@ -221,11 +241,44 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     // Profile setting btn
     @IBAction func createNewGameBtnPressed(_ sender: Any) {
         
+        profileView.isHidden = true
+        createGameView.isHidden =  false
+        
+        blurMap()
+        freezeTheMapActivity()
+        // add gesture to close when necessary
+        
+        tapToUndo = UITapGestureRecognizer(target: self, action: #selector(MapVC.UndoTheMainMapActivity))
+        self.view.addGestureRecognizer(tapToUndo)
+    }
+    @IBAction func createNewGameBtn2Pressed(_ sender: Any) {
+        
+        
+        profileView.isHidden = true
+        createGameView.isHidden =  false
+        
+        blurMap()
+        freezeTheMapActivity()
+        // add gesture to close when necessary
+        
+        tapToUndo = UITapGestureRecognizer(target: self, action: #selector(MapVC.UndoTheMainMapActivity))
+        self.view.addGestureRecognizer(tapToUndo)
+        
         
     }
     
     @IBAction func InfomationBtnPressed(_ sender: Any) {
         
+        
+        profileView.isHidden = true
+        InformationView.isHidden =  false
+        
+        blurMap()
+        freezeTheMapActivity()
+        // add gesture to close when necessary
+        
+        tapToUndo = UITapGestureRecognizer(target: self, action: #selector(MapVC.UndoTheMainMapActivity))
+        self.view.addGestureRecognizer(tapToUndo)
         
     }
     @IBAction func InterestedBtnPressed(_ sender: Any) {
@@ -246,10 +299,29 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     }
     
     
+    @IBAction func information2Btnpressed(_ sender: Any) {
+        
+        profileView.isHidden = true
+        InformationView.isHidden =  false
+        
+        blurMap()
+        freezeTheMapActivity()
+        // add gesture to close when necessary
+        
+        tapToUndo = UITapGestureRecognizer(target: self, action: #selector(MapVC.UndoTheMainMapActivity))
+        self.view.addGestureRecognizer(tapToUndo)
+        
+        
+    }
+    
     @IBAction func logOutBtnPressed(_ sender: Any) {
         
+        self.performSegue(withIdentifier: "GoBackToSignInVC", sender: nil)
         
+    }
+    @IBAction func logOutBtn2Pressed(_ sender: Any) {
         
+        self.performSegue(withIdentifier: "GoBackToSignInVC", sender: nil)
     }
 }
 extension MapVC  {
@@ -280,7 +352,7 @@ extension MapVC  {
             return
         }
         // resize image to 30-32
-        IconImage = resizeImage(image: IconImage!, targetSize: CGSize(width: 30.0, height: 32.0))
+        IconImage = resizeImage(image: IconImage!, targetSize: CGSize(width: 28.0, height: 30.0))
         // setup marker icon
         marker.icon = IconImage
         //marker.appearAnimation
