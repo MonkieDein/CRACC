@@ -185,6 +185,17 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func moveToNewAccountBtnPressed(_ sender: Any) {
+        
+        
+        self.performSegue(withIdentifier: "moveToSignUpVC", sender: nil)
+        
+        
+    }
     
+    @IBAction func moveToForgetPwdVC(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "moveToForgetPwdVC", sender: nil)
+    }
     
 }

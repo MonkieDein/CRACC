@@ -18,6 +18,7 @@ target 'CRACC' do
         pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
         pod 'FBSDKLoginKit'
         pod 'Google/SignIn'
+        pod 'CameraManager', '~> 3.2'
         
         
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks

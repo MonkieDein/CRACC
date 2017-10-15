@@ -8,6 +8,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - CameraManager (3.2.0)
   - FBSDKCoreKit (4.27.1):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.27.1):
@@ -118,6 +119,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - AlamofireImage (~> 3.3)
+  - CameraManager (~> 3.2)
   - FBSDKLoginKit
   - Firebase (~> 4.2)
   - Firebase/Auth
@@ -144,6 +146,7 @@ SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  CameraManager: 2207f57b8da175a8e4d26d405d68201ad54189a6
   FBSDKCoreKit: 03365dad5d790249196ffad8be4f6d8a2d98f932
   FBSDKLoginKit: 66ff53b73cffd967ab773e32fac39e90a60e6d46
   Firebase: 83283761a1ef6dc9846e03d08059f51421afbd65
@@ -174,6 +177,6 @@ SPEC CHECKSUMS:
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
   SidebarOverlay: b65f0a1d9331ce4bf81f82eea202b21cc8655c5a
 
-PODFILE CHECKSUM: 694d2e6790a2d6ae1e83b45a78a77af4641f8937
+PODFILE CHECKSUM: b677c7a79d2d37c0aa792889b26c6562300c5328
 
 COCOAPODS: 1.4.0.beta.1
