@@ -13,8 +13,8 @@ class RoundedBtnForCreateGame: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layer.cornerRadius = self.frame.width / 2
-        clipsToBounds = true
+        //layer.cornerRadius = self.frame.width / 2
+        //clipsToBounds = true
         
         
     }

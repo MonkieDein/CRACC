@@ -11,7 +11,7 @@ import UIKit
 
 
 let Shadow_Gray: CGFloat = 120.0 / 255.0
-let GoogleMap_key = "AIzaSyAxLPyM7mbEIkB6j39uj7G066NjthiRKSw"
+let GoogleMap_key = "AIzaSyDBHwN1y1awDobJnCwtiQBuYmROSMUfMCg"
 let OpenMapWeather_key = "b90582f9d2ca0ab563954574697ea5b9"
 
 
@@ -40,3 +40,5 @@ func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
     
     return newImage!
 }
+
+

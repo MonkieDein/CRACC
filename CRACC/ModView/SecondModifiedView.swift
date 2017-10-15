@@ -14,13 +14,13 @@ class SecondModifiedView: UIView {
         
         super.awakeFromNib()
         
-        let rectShape = CAShapeLayer()
-        rectShape.bounds = frame
-        rectShape.position = center
-        rectShape.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: [.bottomLeft], cornerRadii: CGSize(width: self.frame.height / 4, height: self.frame.height / 4)).cgPath
+       // let rectShape = CAShapeLayer()
+       // rectShape.bounds = frame
+       // rectShape.position = center
+        //rectShape.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: [.bottomLeft], cornerRadii: CGSize(width: self.frame.height / 4, height: self.frame.height / 4)).cgPath
         
         //Here I'm masking the textView's layer with rectShape layer
-        layer.mask = rectShape
+       // layer.mask = rectShape
     }
     
     override func layoutSubviews() {

@@ -15,8 +15,8 @@ class RoundedView: UIView {
         
         super.awakeFromNib()
         
-        layer.cornerRadius = self.frame.height / 2
-        clipsToBounds = true
+        //layer.cornerRadius = self.frame.height / 2
+        //clipsToBounds = true
     }
     
     override func layoutSubviews() {

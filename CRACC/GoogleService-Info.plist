@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>936758512977-4rb67eae6ggd7m7p24v9143bme2sij7k.apps.googleusercontent.com</string>
+	<string>987354038666-uio55rvrq21uh9t5171ouitfder81bei.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.936758512977-4rb67eae6ggd7m7p24v9143bme2sij7k</string>
+	<string>com.googleusercontent.apps.987354038666-uio55rvrq21uh9t5171ouitfder81bei</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD6fE0kG4CPAAYxwlMTRrRSAxR9G6hClH4</string>
+	<string>AIzaSyCxmBA6G6rg96HUmi5Bs8RFk7p_hGc0Sgg</string>
 	<key>GCM_SENDER_ID</key>
-	<string>936758512977</string>
+	<string>987354038666</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>CACC-LLC.CRACC</string>
+	<string>Team-LLC.CRACC</string>
 	<key>PROJECT_ID</key>
-	<string>cracc-4847c</string>
+	<string>cracc-c6f5f</string>
 	<key>STORAGE_BUCKET</key>
-	<string>cracc-4847c.appspot.com</string>
+	<string>cracc-c6f5f.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:936758512977:ios:80ce596b360d8a72</string>
+	<string>1:987354038666:ios:ddb5810330c238f7</string>
 	<key>DATABASE_URL</key>
-	<string>https://cracc-4847c.firebaseio.com</string>
+	<string>https://cracc-c6f5f.firebaseio.com</string>
 </dict>
 </plist>

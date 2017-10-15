@@ -14,8 +14,8 @@ class ModifiedInformationView: UIView {
         
         super.awakeFromNib()
         
-        layer.cornerRadius = self.frame.height / 26
-        clipsToBounds = true
+        //layer.cornerRadius = self.frame.height / 26
+        //clipsToBounds = true
     }
     
     override func layoutSubviews() {

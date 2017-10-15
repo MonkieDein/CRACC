@@ -14,8 +14,8 @@ class BlendedCornerView: UIView {
         
         super.awakeFromNib()
         
-        layer.cornerRadius = self.frame.height / 11
-        clipsToBounds = true
+        //layer.cornerRadius = self.frame.height / 11
+       // clipsToBounds = true
     }
     
     override func layoutSubviews() {

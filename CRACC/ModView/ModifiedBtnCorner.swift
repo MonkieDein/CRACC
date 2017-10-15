@@ -14,8 +14,8 @@ class ModifiedBtnCorner: UIButton {
         super.awakeFromNib()
         
         
-        layer.cornerRadius = self.frame.width / 7
-        clipsToBounds = true
+        //layer.cornerRadius = self.frame.width / 7
+        //clipsToBounds = true
         
     }
     

@@ -15,9 +15,13 @@ import FirebaseDatabase
 
 class MapVC: UIViewController, GMSMapViewDelegate {
     
+    var Done = false
+    
+    @IBOutlet weak var bottomHeight: NSLayoutConstraint!
     
     // create game view
     
+    @IBOutlet weak var createGameViewTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var createGameView: ModifiedInformationView!
     
@@ -35,7 +39,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var bottomConstraintForChatView: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraintForChatView: NSLayoutConstraint!
     
-    
+    var CreateGameTop = 0
     @IBOutlet weak var profileBtn: RoundBtn!
     
     
@@ -105,6 +109,40 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(MapVC.showKeyBoard), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(MapVC.hideKeyboard), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+    }
+    
+    
+    @objc func showKeyBoard(noftification: NSNotification) {
+        
+        if let userInfo = noftification.userInfo {
+            if let keyboardSize = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                CreateGameTop = Int(createGameViewTopConstraint.constant)
+                createGameViewTopConstraint.constant = -67.0
+                bottomHeight.constant = keyboardSize.height - 40.0
+                Done = false
+                view.setNeedsLayout()
+
+                
+            }
+        }
+    }
+    
+    
+    
+    @objc func hideKeyboard(noftification: NSNotification) {
+        bottomHeight.constant = 1.0
+        createGameViewTopConstraint.constant = CGFloat(CreateGameTop)
+        Done = true
+        view.setNeedsLayout()
     }
 
     func configureLocationService() {
@@ -189,30 +227,33 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     
     @objc func UndoTheMainMapActivity() {
         
+        if Done == true {
+            self.mapView.isUserInteractionEnabled = true
+            self.locationBtn.isUserInteractionEnabled = true
+            self.chatImage.isUserInteractionEnabled = true
+            self.GameManagementImage.isUserInteractionEnabled = true
+            self.profileBtn.isUserInteractionEnabled = true
+            
+            // undo blur
+            
+            self.mapView.backgroundColor = UIColor.clear
+            self.mapView.alpha = 1.0
+            self.navigationVC.alpha = 1.0
+            self.locationBtn.alpha = 1.0
+            
+            // hide unecessaryView
+            profileView.isHidden =  true
+            chatView.isHidden = true
+            InformationView.isHidden = true
+            controlGameView.isHidden = true
+            createGameView.isHidden = true
+            
+            // remove gesture
+            
+            self.view.removeGestureRecognizer(tapToUndo)
+        }
         
-        self.mapView.isUserInteractionEnabled = true
-        self.locationBtn.isUserInteractionEnabled = true
-        self.chatImage.isUserInteractionEnabled = true
-        self.GameManagementImage.isUserInteractionEnabled = true
-        self.profileBtn.isUserInteractionEnabled = true
-        
-        // undo blur
-        
-        self.mapView.backgroundColor = UIColor.clear
-        self.mapView.alpha = 1.0
-        self.navigationVC.alpha = 1.0
-        self.locationBtn.alpha = 1.0
-        
-        // hide unecessaryView
-         profileView.isHidden =  true
-         chatView.isHidden = true
-         InformationView.isHidden = true
-         controlGameView.isHidden = true
-         createGameView.isHidden = true
-        
-        // remove gesture
-        
-        self.view.removeGestureRecognizer(tapToUndo)
+        view.endEditing(true)
         
         
         
