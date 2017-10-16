@@ -11,11 +11,20 @@ import GoogleMaps
 import GooglePlaces
 import Firebase
 import FirebaseDatabase
+import CameraManager
 
 
 class MapVC: UIViewController, GMSMapViewDelegate {
     
+    // setup orientation for camera
+    
+    var orientation: String!
+    
+    let cameraManager = CameraManager()
+    
+    @IBOutlet weak var cameraView: UIView!
     var Done = true
+    
     
     @IBOutlet weak var bottomHeight: NSLayoutConstraint!
     
@@ -174,6 +183,71 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     }
  */
     
+    // setup camera
+    
+    func setupCamera() {
+    
+        // load first orientation
+        
+        orientation = "front"
+        
+        // ask for permission camera user
+        cameraManager.showAccessPermissionPopupAutomatically = true
+        // set default output
+        cameraManager.cameraOutputMode = .stillImage
+        
+        
+        // check camera condition and use
+        
+        let currentCameraState = cameraManager.currentCameraStatus()
+        
+        
+        if currentCameraState == .notDetermined {
+            
+            askForPermission()
+            
+        } else {
+            addCameraToView()
+        }
+        
+        cameraManager.flashMode = .auto
+    
+    
+    
+    }
+    
+    
+    // private func add camera to view
+    
+    fileprivate func addCameraToView()
+        
+        
+    {
+        
+        cameraManager.cameraDevice = .front
+        
+        
+        // camera camera view
+        _ = cameraManager.addPreviewLayerToView(cameraView)
+        cameraManager.showErrorBlock = { [weak self] (erTitle: String, erMessage: String) -> Void in
+            
+            let alertController = UIAlertController(title: erTitle, message: erMessage, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (alertAction) -> Void in  }))
+            
+            self?.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    // ask for permission for the first time
+    
+    fileprivate func askForPermission() {
+        cameraManager.askUserForCameraPermission({ permissionGranted in
+            if permissionGranted {
+                self.addCameraToView()
+            }
+        })
+    }
+    
     
     
     // chat button setup
@@ -246,6 +320,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
             // remove gesture
             
             self.view.removeGestureRecognizer(tapToUndo)
+            // stop camera session
+            cameraManager.stopCaptureSession()
         }
         
         view.endEditing(true)
@@ -254,7 +330,17 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         
     }
         
+    @IBAction func openCameraVC(_ sender: Any) {
         
+        
+        self.performSegue(withIdentifier: "moveToCamersVC", sender: nil)
+        
+    
+        
+        
+        
+    }
+    
         
     @IBAction func SettingBtnPressed(_ sender: Any) {
         profileView.isHidden =  false
@@ -279,20 +365,23 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         
         profileView.isHidden = true
         createGameView.isHidden =  false
-        
+        setupCamera()
+        cameraManager.resumeCaptureSession()
         blurMap()
         freezeTheMapActivity()
         // add gesture to close when necessary
         
         tapToUndo = UITapGestureRecognizer(target: self, action: #selector(MapVC.UndoTheMainMapActivity))
         self.view.addGestureRecognizer(tapToUndo)
+        
     }
     @IBAction func createNewGameBtn2Pressed(_ sender: Any) {
         
         
         profileView.isHidden = true
         createGameView.isHidden =  false
-        
+        setupCamera()
+        cameraManager.resumeCaptureSession()
         blurMap()
         freezeTheMapActivity()
         // add gesture to close when necessary

@@ -31,15 +31,26 @@ class signUpVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func BirthdayEditing(_ sender: UITextField) {
+    
+    
+    
+    
+    
+    @IBAction func birthdayBtnPressed(_ sender: UITextField) {
+        
         let datePickerView: UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.date
+        //datePickerView.maximumDate = Date().addingTimeInterval(60 * 60 * 24 * 5)
+        //datePickerView.minimumDate = Date()
         sender.inputView = datePickerView
+        
         datePickerView.addTarget(self, action: #selector(signUpVC.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        
+        
     }
     
-    
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.none
@@ -51,6 +62,7 @@ class signUpVC: UIViewController {
         
         
     }
+    
     
     
     @IBAction func signUpBtnPressed(_ sender: Any) {

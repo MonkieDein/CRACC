@@ -232,8 +232,8 @@
 		6842CA620CBC7C05692C9CBACF3C9EBD /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D98EF64CB72C072C1876BC88EDD4BDAF /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		69F9858B36320C66019C11FCAA63DB4D /* c.cc in Sources */ = {isa = PBXBuildFile; fileRef = 257E555308E29EAA83E8E9D0EDD63330 /* c.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		6A02DCD5FCB28EFE76786889F85C371D /* FBSDKUIUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 997E97AE6A4876C8439225AC6F3457DD /* FBSDKUIUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6A09F3C81F93F98F00171FDB /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6102948EC119EBE30E31210A2A1679F3 /* FirebaseDatabase.framework */; };
 		6A3D2BF94C8A98AEE130A80DC2D99E4B /* FBSDKLoginManagerLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B3C53E5587DCF0C9A928EB94585FC82 /* FBSDKLoginManagerLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6AAAB77F1F950F9B00CAF307 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6102948EC119EBE30E31210A2A1679F3 /* FirebaseDatabase.framework */; };
 		6AFE71483C188C376C7B0F37453FDB24 /* BFAppLink.h in Headers */ = {isa = PBXBuildFile; fileRef = F7BA7D2A65335CF54F489C5695CBD06A /* BFAppLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B3E1EF3C0A0280C1E99603DFC2966F0 /* JSQMessagesViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E49C34960B256CA6CDD21818E70F7BC /* JSQMessagesViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B88CB8CEE353060B1C392AD0F2D5BA5 /* coding.cc in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D6B2C03B40570AAEE5EDC4E8EF071 /* coding.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
@@ -1461,7 +1461,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A09F3C81F93F98F00171FDB /* FirebaseDatabase.framework in Frameworks */,
+				6AAAB77F1F950F9B00CAF307 /* FirebaseDatabase.framework in Frameworks */,
 				72FB0A0B7CC16F19E94D1790A4C4FBCC /* CoreLocation.framework in Frameworks */,
 				25879CDBE7CF862BA00EEB95CD33F310 /* Foundation.framework in Frameworks */,
 				36897F1A564529FA0F6EDC6E56978E5A /* GoogleToolboxForMac.framework in Frameworks */,
@@ -3762,7 +3762,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -5133,7 +5133,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;

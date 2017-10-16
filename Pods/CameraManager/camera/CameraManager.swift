@@ -78,7 +78,7 @@ open class CameraManager: NSObject, AVCaptureFileOutputRecordingDelegate, UIGest
     open var shouldKeepViewAtOrientationChanges = false
     
     /// Property to determine if manager should enable tap to focus on camera preview. Default value is true.
-    open var shouldEnableTapToFocus = true {
+    open var shouldEnableTapToFocus = false {
         didSet {
             focusGesture.isEnabled = shouldEnableTapToFocus
         }
@@ -821,9 +821,9 @@ open class CameraManager: NSObject, AVCaptureFileOutputRecordingDelegate, UIGest
     fileprivate func _currentVideoOrientation() -> AVCaptureVideoOrientation {
         switch UIDevice.current.orientation {
         case .landscapeLeft:
-            return .landscapeRight
+            return .portrait
         case .landscapeRight:
-            return .landscapeLeft
+            return .portrait
         default:
             return .portrait
         }

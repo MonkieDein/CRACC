@@ -13,6 +13,7 @@
 		6A5C4AF71F80592C00C4591E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C4AF61F80592C00C4591E /* Constant.swift */; };
 		6AA0CF641F89544D00A88D64 /* Modified2cornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA0CF631F89544D00A88D64 /* Modified2cornerView.swift */; };
 		6AA0CF661F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA0CF651F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift */; };
+		6AAAB7821F954ED100CAF307 /* cameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAAB7811F954ED100CAF307 /* cameraVC.swift */; };
 		6AAE8C761F8BD54A00C07E71 /* ModifiedBtnCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE8C751F8BD54A00C07E71 /* ModifiedBtnCorner.swift */; };
 		6AB146E01F8056B500D0D74B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB146DF1F8056B500D0D74B /* AppDelegate.swift */; };
 		6AB146E21F8056B500D0D74B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB146E11F8056B500D0D74B /* MapVC.swift */; };
@@ -55,6 +56,7 @@
 		6A8F6DDC1F92881100E22318 /* CRACC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CRACC.entitlements; sourceTree = "<group>"; };
 		6AA0CF631F89544D00A88D64 /* Modified2cornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modified2cornerView.swift; sourceTree = "<group>"; };
 		6AA0CF651F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addBorderAndRoundedCornerImgView.swift; sourceTree = "<group>"; };
+		6AAAB7811F954ED100CAF307 /* cameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraVC.swift; sourceTree = "<group>"; };
 		6AAE8C751F8BD54A00C07E71 /* ModifiedBtnCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedBtnCorner.swift; sourceTree = "<group>"; };
 		6AB146DC1F8056B500D0D74B /* CRACC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRACC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB146DF1F8056B500D0D74B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		6A5C4AF21F8058F800C4591E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6AAAB7801F954EB900CAF307 /* cameraVC */,
 				6AF4718A1F88A55300B59126 /* SigninVC */,
 				6ADF62421F948DC70077E4EF /* InterestedVC */,
 				6ADF62411F948DBA0077E4EF /* chatVC */,
@@ -212,6 +215,14 @@
 				6A5C4AF61F80592C00C4591E /* Constant.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		6AAAB7801F954EB900CAF307 /* cameraVC */ = {
+			isa = PBXGroup;
+			children = (
+				6AAAB7811F954ED100CAF307 /* cameraVC.swift */,
+			);
+			path = cameraVC;
 			sourceTree = "<group>";
 		};
 		6AB146D31F8056B500D0D74B = {
@@ -486,6 +497,7 @@
 				6ACC359C1F93D9AE00B5D55A /* signUpVC.swift in Sources */,
 				6AB146E21F8056B500D0D74B /* MapVC.swift in Sources */,
 				6AFCBC2B1F81E397006BC119 /* RoundBtn.swift in Sources */,
+				6AAAB7821F954ED100CAF307 /* cameraVC.swift in Sources */,
 				6AF471901F88B73700B59126 /* RoundedBtn.swift in Sources */,
 				6A44239A1F8181BB00871E54 /* ContainerVC.swift in Sources */,
 				6ACC35A01F93E8DD00B5D55A /* ModifiedCameraFrontView.swift in Sources */,
