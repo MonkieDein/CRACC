@@ -1,14 +1,14 @@
 //
-//  forgetPwdVC.swift
+//  interestedVC.swift
 //  CRACC
 //
-//  Created by Khoi Nguyen on 10/15/17.
+//  Created by Khoi Nguyen on 10/16/17.
 //  Copyright © 2017 Cracc LLC. All rights reserved.
 //
 
 import UIKit
 
-class forgetPwdVC: UIViewController {
+class interestedVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,11 +16,15 @@ class forgetPwdVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    
-    @IBAction func dismissBtnPressed(_ sender: Any) {
+    @IBAction func backToMainVCBtn1Pressed(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)
         
+    }
+    
+    @IBAction func backToMainVCBtn2Pressed(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
         
     }
     

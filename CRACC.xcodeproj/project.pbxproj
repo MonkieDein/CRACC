@@ -30,6 +30,8 @@
 		6ACC359C1F93D9AE00B5D55A /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACC359B1F93D9AE00B5D55A /* signUpVC.swift */; };
 		6ACC35A01F93E8DD00B5D55A /* ModifiedCameraFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACC359F1F93E8DD00B5D55A /* ModifiedCameraFrontView.swift */; };
 		6ADC74621F92A3A9001E4F12 /* GameManagementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC74611F92A3A9001E4F12 /* GameManagementVC.swift */; };
+		6ADF62441F948DE40077E4EF /* chatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADF62431F948DE40077E4EF /* chatVC.swift */; };
+		6ADF62461F948DF60077E4EF /* interestedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADF62451F948DF60077E4EF /* interestedVC.swift */; };
 		6AE3F9B41F904A3200B80061 /* ModifiedInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE3F9B31F904A3200B80061 /* ModifiedInformationView.swift */; };
 		6AE3F9B61F904FFE00B80061 /* RoundedImgAndBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE3F9B51F904FFE00B80061 /* RoundedImgAndBorder.swift */; };
 		6AE3F9B81F90968000B80061 /* RoundedBtnForCreateGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE3F9B71F90968000B80061 /* RoundedBtnForCreateGame.swift */; };
@@ -72,6 +74,8 @@
 		6ACC359B1F93D9AE00B5D55A /* signUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
 		6ACC359F1F93E8DD00B5D55A /* ModifiedCameraFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedCameraFrontView.swift; sourceTree = "<group>"; };
 		6ADC74611F92A3A9001E4F12 /* GameManagementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameManagementVC.swift; path = CRACC/ModView/Annebelle2ndQuiz/Annebelle2ndQuiz/GameManagementVC.swift; sourceTree = SOURCE_ROOT; };
+		6ADF62431F948DE40077E4EF /* chatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatVC.swift; sourceTree = "<group>"; };
+		6ADF62451F948DF60077E4EF /* interestedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interestedVC.swift; sourceTree = "<group>"; };
 		6AE3F9B31F904A3200B80061 /* ModifiedInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedInformationView.swift; sourceTree = "<group>"; };
 		6AE3F9B51F904FFE00B80061 /* RoundedImgAndBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImgAndBorder.swift; sourceTree = "<group>"; };
 		6AE3F9B71F90968000B80061 /* RoundedBtnForCreateGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBtnForCreateGame.swift; sourceTree = "<group>"; };
@@ -175,9 +179,9 @@
 		6A5C4AF21F8058F800C4591E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6ACC35981F93D91900B5D55A /* forgetPwdVC */,
-				6ACC35971F93D90E00B5D55A /* signUpVC */,
 				6AF4718A1F88A55300B59126 /* SigninVC */,
+				6ADF62421F948DC70077E4EF /* InterestedVC */,
+				6ADF62411F948DBA0077E4EF /* chatVC */,
 				6AB69C741F8286AD00D79BDE /* Community VC */,
 				6A4423981F8181A900871E54 /* Container */,
 				6A4423911F8172FF00871E54 /* MapVC */,
@@ -271,6 +275,22 @@
 			path = forgetPwdVC;
 			sourceTree = "<group>";
 		};
+		6ADF62411F948DBA0077E4EF /* chatVC */ = {
+			isa = PBXGroup;
+			children = (
+				6ADF62431F948DE40077E4EF /* chatVC.swift */,
+			);
+			path = chatVC;
+			sourceTree = "<group>";
+		};
+		6ADF62421F948DC70077E4EF /* InterestedVC */ = {
+			isa = PBXGroup;
+			children = (
+				6ADF62451F948DF60077E4EF /* interestedVC.swift */,
+			);
+			path = InterestedVC;
+			sourceTree = "<group>";
+		};
 		6AF471831F889F5400B59126 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +304,8 @@
 		6AF4718A1F88A55300B59126 /* SigninVC */ = {
 			isa = PBXGroup;
 			children = (
+				6ACC35971F93D90E00B5D55A /* signUpVC */,
+				6ACC35981F93D91900B5D55A /* forgetPwdVC */,
 				6AF4718B1F88A57700B59126 /* FirstLookVC.swift */,
 			);
 			path = SigninVC;
@@ -479,12 +501,14 @@
 				6AE3F9B81F90968000B80061 /* RoundedBtnForCreateGame.swift in Sources */,
 				6AA0CF641F89544D00A88D64 /* Modified2cornerView.swift in Sources */,
 				6AAE8C761F8BD54A00C07E71 /* ModifiedBtnCorner.swift in Sources */,
+				6ADF62461F948DF60077E4EF /* interestedVC.swift in Sources */,
 				6ACC359A1F93D99900B5D55A /* forgetPwdVC.swift in Sources */,
 				6AA0CF661F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift in Sources */,
 				6AB69C781F82EAD000D79BDE /* ModifiedCornerRariusView.swift in Sources */,
 				6AB69C761F82910B00D79BDE /* CommunityVC.swift in Sources */,
 				6A5C4AF71F80592C00C4591E /* Constant.swift in Sources */,
 				6AF471941F88B9B000B59126 /* loginBtn.swift in Sources */,
+				6ADF62441F948DE40077E4EF /* chatVC.swift in Sources */,
 				6ADC74621F92A3A9001E4F12 /* GameManagementVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

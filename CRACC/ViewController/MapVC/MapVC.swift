@@ -43,8 +43,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     @IBOutlet weak var profileBtn: RoundBtn!
     
     
-    @IBOutlet weak var Width1OfRatingView: NSLayoutConstraint!
-    @IBOutlet weak var with2OfRatingView: NSLayoutConstraint!
+    
     
     
     
@@ -92,10 +91,6 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         
         leadingConstraintForChatView.constant = self.view.frame.width * (1/2)
         bottomConstraintForChatView.constant = self.view.frame.height * (1/2) - 75
-        
-        Width1OfRatingView.constant = self.view.frame.width *
-            (100/414) + 19
-        with2OfRatingView.constant = self.view.frame.width * (100/414) + 19
         
         
         // declare self for all delegate function
@@ -325,7 +320,12 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     @IBAction func InterestedBtnPressed(_ sender: Any) {
         
         
+        self.performSegue(withIdentifier: "moveToInterestedVC", sender: nil)
         
+    }
+    @IBAction func InterestedBtn2Pressed(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "moveToInterestedVC", sender: nil)
         
     }
     @IBAction func communityBtnPressed(_ sender: Any) {

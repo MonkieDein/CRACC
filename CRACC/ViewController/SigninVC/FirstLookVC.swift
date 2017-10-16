@@ -30,9 +30,9 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         super.viewDidLoad()
         
         
-        width1Constraint.constant = self.view.frame.width *
-        (100/414)
-        width2Constraint.constant = self.view.frame.width * (100/414)
+        //width1Constraint.constant = self.view.frame.width *
+        //(100/414)
+        //width2Constraint.constant = self.view.frame.width * (100/414)
     
         
         

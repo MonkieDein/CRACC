@@ -1,5 +1,5 @@
 //
-//  signUpVC.swift
+//  forgetPwdVC.swift
 //  CRACC
 //
 //  Created by Khoi Nguyen on 10/15/17.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class signUpVC: UIViewController {
+class forgetPwdVC: UIViewController {
 
+    @IBOutlet weak var ResetEmailPwdLbl: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,10 +20,19 @@ class signUpVC: UIViewController {
     
     @IBAction func dismissBtnPressed(_ sender: Any) {
         
-        
         self.dismiss(animated: true, completion: nil)
+        
+        
     }
     
-   
-
+    
+    @IBAction func sendCodeBtnPressed(_ sender: Any) {
+        
+        
+        
+        
+    }
+    
+    
+    
 }
