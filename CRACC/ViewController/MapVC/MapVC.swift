@@ -15,7 +15,7 @@ import FirebaseDatabase
 
 class MapVC: UIViewController, GMSMapViewDelegate {
     
-    var Done = false
+    var Done = true
     
     @IBOutlet weak var bottomHeight: NSLayoutConstraint!
     
@@ -103,7 +103,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         locationManager.delegate = self
         configureLocationServices()
         
-        marker.tracksInfoWindowChanges = true
+        
         //blurMap()
         
         // Do any additional setup after loading the view, typically from a nib.
