@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		37C97F94BA5B3F4AE9F315F0 /* Pods_CRACC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458D3514FDEA26296B0134D4 /* Pods_CRACC.framework */; };
+		6A08B6E71F9D048200D7C26D /* GoogleSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08B6E61F9D048200D7C26D /* GoogleSupportVC.swift */; };
+		6A08B6E91F9D358F00D7C26D /* signUpVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08B6E81F9D358F00D7C26D /* signUpVC3.swift */; };
+		6A08B6EB1F9D368C00D7C26D /* signUpVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08B6EA1F9D368C00D7C26D /* signUpVC2.swift */; };
 		6A44238E1F80D32800871E54 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A44238D1F80D32800871E54 /* RoundedView.swift */; };
 		6A44239A1F8181BB00871E54 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4423991F8181BB00871E54 /* ContainerVC.swift */; };
 		6A5C4AF71F80592C00C4591E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C4AF61F80592C00C4591E /* Constant.swift */; };
 		6AA0CF641F89544D00A88D64 /* Modified2cornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA0CF631F89544D00A88D64 /* Modified2cornerView.swift */; };
 		6AA0CF661F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA0CF651F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift */; };
 		6AAAB7821F954ED100CAF307 /* cameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAAB7811F954ED100CAF307 /* cameraVC.swift */; };
+		6AAAB7881F996B3B00CAF307 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAAB7871F996B3B00CAF307 /* DataService.swift */; };
 		6AAE8C761F8BD54A00C07E71 /* ModifiedBtnCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAE8C751F8BD54A00C07E71 /* ModifiedBtnCorner.swift */; };
 		6AB146E01F8056B500D0D74B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB146DF1F8056B500D0D74B /* AppDelegate.swift */; };
 		6AB146E21F8056B500D0D74B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB146E11F8056B500D0D74B /* MapVC.swift */; };
@@ -47,9 +51,11 @@
 
 /* Begin PBXFileReference section */
 		458D3514FDEA26296B0134D4 /* Pods_CRACC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRACC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A08B6E61F9D048200D7C26D /* GoogleSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSupportVC.swift; sourceTree = "<group>"; };
+		6A08B6E81F9D358F00D7C26D /* signUpVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC3.swift; sourceTree = "<group>"; };
+		6A08B6EA1F9D368C00D7C26D /* signUpVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC2.swift; sourceTree = "<group>"; };
 		6A4423861F80CFA800871E54 /* Fancyfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fancyfield.swift; sourceTree = "<group>"; };
 		6A4423881F80CFA800871E54 /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
-		6A44238A1F80CFA800871E54 /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		6A44238D1F80D32800871E54 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		6A4423991F8181BB00871E54 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		6A5C4AF61F80592C00C4591E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -57,6 +63,7 @@
 		6AA0CF631F89544D00A88D64 /* Modified2cornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modified2cornerView.swift; sourceTree = "<group>"; };
 		6AA0CF651F895C6E00A88D64 /* addBorderAndRoundedCornerImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addBorderAndRoundedCornerImgView.swift; sourceTree = "<group>"; };
 		6AAAB7811F954ED100CAF307 /* cameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraVC.swift; sourceTree = "<group>"; };
+		6AAAB7871F996B3B00CAF307 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		6AAE8C751F8BD54A00C07E71 /* ModifiedBtnCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedBtnCorner.swift; sourceTree = "<group>"; };
 		6AB146DC1F8056B500D0D74B /* CRACC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRACC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB146DF1F8056B500D0D74B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +94,7 @@
 		6AF4718D1F88B08C00B59126 /* Myriad Pro Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Italic.ttf"; sourceTree = "<group>"; };
 		6AF4718F1F88B73700B59126 /* RoundedBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBtn.swift; sourceTree = "<group>"; };
 		6AF471931F88B9B000B59126 /* loginBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginBtn.swift; sourceTree = "<group>"; };
+		6AF5276E1F99842B00EC4F7B /* bridge-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bridge-header.h"; sourceTree = "<group>"; };
 		6AFCBC2A1F81E397006BC119 /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		9A0AE34DCC236685EEF871F1 /* Pods-CRACC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRACC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRACC/Pods-CRACC.debug.xcconfig"; sourceTree = "<group>"; };
 		FF85B0C6839A3D035C4A2123 /* Pods-CRACC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRACC.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRACC/Pods-CRACC.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,12 +129,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6A08B6E51F9D046100D7C26D /* GoogleSupportVC */ = {
+			isa = PBXGroup;
+			children = (
+				6A08B6E61F9D048200D7C26D /* GoogleSupportVC.swift */,
+			);
+			path = GoogleSupportVC;
+			sourceTree = "<group>";
+		};
 		6A4423841F80CFA800871E54 /* ModView */ = {
 			isa = PBXGroup;
 			children = (
 				6A4423861F80CFA800871E54 /* Fancyfield.swift */,
 				6A4423881F80CFA800871E54 /* FancyView.swift */,
-				6A44238A1F80CFA800871E54 /* RoundTextField.swift */,
 				6A44238D1F80D32800871E54 /* RoundedView.swift */,
 				6AFCBC2A1F81E397006BC119 /* RoundBtn.swift */,
 				6AB69C701F82023E00D79BDE /* ImageRound.swift */,
@@ -181,8 +196,8 @@
 		6A5C4AF21F8058F800C4591E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6AAAB7801F954EB900CAF307 /* cameraVC */,
 				6AF4718A1F88A55300B59126 /* SigninVC */,
+				6AAAB7801F954EB900CAF307 /* cameraVC */,
 				6ADF62421F948DC70077E4EF /* InterestedVC */,
 				6ADF62411F948DBA0077E4EF /* chatVC */,
 				6AB69C741F8286AD00D79BDE /* Community VC */,
@@ -225,6 +240,14 @@
 			path = cameraVC;
 			sourceTree = "<group>";
 		};
+		6AAAB7841F996B1700CAF307 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				6AAAB7871F996B3B00CAF307 /* DataService.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
 		6AB146D31F8056B500D0D74B = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				6A8F6DDC1F92881100E22318 /* CRACC.entitlements */,
+				6AAAB7841F996B1700CAF307 /* DataService */,
 				6AF471831F889F5400B59126 /* Font */,
 				6A5C4AF11F8058F200C4591E /* Delegate */,
 				6A5C4AF21F8058F800C4591E /* ViewController */,
@@ -258,6 +282,7 @@
 				6AB146EE1F8056B500D0D74B /* Info.plist */,
 				6AC5CF1A1F92D57A00669FE0 /* GoogleService-Info.plist */,
 				6AB146E61F8056B500D0D74B /* CRACC.xcdatamodeld */,
+				6AF5276E1F99842B00EC4F7B /* bridge-header.h */,
 			);
 			path = CRACC;
 			sourceTree = "<group>";
@@ -274,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				6ACC359B1F93D9AE00B5D55A /* signUpVC.swift */,
+				6A08B6EA1F9D368C00D7C26D /* signUpVC2.swift */,
+				6A08B6E81F9D358F00D7C26D /* signUpVC3.swift */,
 			);
 			path = signUpVC;
 			sourceTree = "<group>";
@@ -315,9 +342,10 @@
 		6AF4718A1F88A55300B59126 /* SigninVC */ = {
 			isa = PBXGroup;
 			children = (
+				6AF4718B1F88A57700B59126 /* FirstLookVC.swift */,
+				6A08B6E51F9D046100D7C26D /* GoogleSupportVC */,
 				6ACC35971F93D90E00B5D55A /* signUpVC */,
 				6ACC35981F93D91900B5D55A /* forgetPwdVC */,
-				6AF4718B1F88A57700B59126 /* FirstLookVC.swift */,
 			);
 			path = SigninVC;
 			sourceTree = "<group>";
@@ -443,6 +471,7 @@
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SidebarOverlay/SidebarOverlay.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftLoader/SwiftLoader.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -461,6 +490,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SidebarOverlay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLoader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -503,7 +533,11 @@
 				6ACC35A01F93E8DD00B5D55A /* ModifiedCameraFrontView.swift in Sources */,
 				6AB146E01F8056B500D0D74B /* AppDelegate.swift in Sources */,
 				6AE3F9B41F904A3200B80061 /* ModifiedInformationView.swift in Sources */,
+				6AAAB7881F996B3B00CAF307 /* DataService.swift in Sources */,
 				6AB146E81F8056B500D0D74B /* CRACC.xcdatamodeld in Sources */,
+				6A08B6EB1F9D368C00D7C26D /* signUpVC2.swift in Sources */,
+				6A08B6E71F9D048200D7C26D /* GoogleSupportVC.swift in Sources */,
+				6A08B6E91F9D358F00D7C26D /* signUpVC3.swift in Sources */,
 				6A44238E1F80D32800871E54 /* RoundedView.swift in Sources */,
 				6AB69C711F82023E00D79BDE /* ImageRound.swift in Sources */,
 				6AB69C7A1F82ED0D00D79BDE /* SecondModifiedView.swift in Sources */,
@@ -669,7 +703,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Team-LLC.CRACC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CRACC/bridge-header.h";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -691,7 +725,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Team-LLC.CRACC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CRACC/bridge-header.h";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -28,8 +28,30 @@ class forgetPwdVC: UIViewController {
     
     @IBAction func sendCodeBtnPressed(_ sender: Any) {
         
+        if let email = ResetEmailPwdLbl.text, email != "" {
+            
+        } else {
+            
+            showErrorAlert("Oops !!!", msg: "CRACC: Fill your email and we will help you to reset your account.")
+            
+            
+        }
         
         
+        
+        
+    }
+    
+    // func show error alert
+    
+    func showErrorAlert(_ title: String, msg: String) {
+        
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        
+        
+        present(alert, animated: true, completion: nil)
         
     }
     

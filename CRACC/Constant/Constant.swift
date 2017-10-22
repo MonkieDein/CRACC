@@ -11,8 +11,16 @@ import UIKit
 
 
 let Shadow_Gray: CGFloat = 120.0 / 255.0
+var userUID = ""
 let GoogleMap_key = "AIzaSyDBHwN1y1awDobJnCwtiQBuYmROSMUfMCg"
 let OpenMapWeather_key = "b90582f9d2ca0ab563954574697ea5b9"
+
+
+var Avatarimage: UIImage?
+var name = ""
+var birthday = ""
+var email = ""
+
 
 
 func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {

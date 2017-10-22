@@ -10,7 +10,6 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import Firebase
-import FirebaseDatabase
 import CameraManager
 
 
@@ -122,7 +121,28 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(MapVC.hideKeyboard), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
+        
+        cameraManager.resumeCaptureSession()
+        
     }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        
+        
+        cameraManager.stopCaptureSession()
+        
+        
+
+        
+        
+        
+    }
+    
+    
+    
     
     
     @objc func showKeyBoard(noftification: NSNotification) {

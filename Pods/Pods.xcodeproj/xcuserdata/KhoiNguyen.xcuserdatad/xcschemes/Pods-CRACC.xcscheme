@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0910"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "40833623938570DEBA8917CB3DB7C404"
+               BlueprintIdentifier = "64CC1E52F4036B84056507DE8DC5FF3F"
                BuildableName = "Pods_CRACC.framework"
                BlueprintName = "Pods-CRACC"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "40833623938570DEBA8917CB3DB7C404"
+            BlueprintIdentifier = "64CC1E52F4036B84056507DE8DC5FF3F"
             BuildableName = "Pods_CRACC.framework"
             BlueprintName = "Pods-CRACC"
             ReferencedContainer = "container:Pods.xcodeproj">
