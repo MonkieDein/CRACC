@@ -45,6 +45,17 @@ class DataService {
     var UsersRef: DatabaseReference {
         return mainDataBaseRef.child(FIR_CHILD_USERS)
     }
+    var UsersFacebookRef: DatabaseReference {
+        return mainDataBaseRef.child(FIR_CHILD_USERS).child("Facebook")
+    }
+    var UsersGoogleRef: DatabaseReference {
+        return mainDataBaseRef.child(FIR_CHILD_USERS).child("Google")
+    }
+    var UsersEmailRef: DatabaseReference {
+        return mainDataBaseRef.child(FIR_CHILD_USERS).child("Email")
+    }
+    
+    
     
     var activeUserNameRef: DatabaseReference {
         return mainDataBaseRef.child("active_usernames")

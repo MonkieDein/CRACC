@@ -166,7 +166,7 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                                             let imageUrl = String(describing: photoUrl)
                                             self.name = profile?.name
                                             self.email = profile?.email
-                                            self.type = "Google.com"
+                                            self.type = "Google"
                                             
                                             
                                             
@@ -275,9 +275,90 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                             
                         } else {
                             
+                            DataService.instance.UsersGoogleRef.child(userUID).observeSingleEvent(of: .value, with: { (snapData) in
+                                
+                                if let dict = snapData.value as? Dictionary<String, Any> {
+                                
+                                
+                                    print(dict)
+                                    
+                                    if let name = dict["Name"] as? String {
+                                        
+                                        self.name = name
+                                    
+                                    }
+                                    
+                                    if let email = dict["Email"] as? String {
+                                        
+                                        self.email = email
+                                        
+                                    }
+                                    
+                                    if let gender = dict["Gender"] as? String {
+                                        
+                                        self.gender = gender
+                                        
+                                    }
+                                    
+                                    if let type = dict["Type"] as? String {
+                                        
+                                        self.type = type
+                                        
+                                    }
+                                    if let birthday = dict["Birthday"] as? String {
+                                        
+                                        self.birthday = birthday
+                                        
+                                    }
+                                    
+                                    if let avtarUrls = dict["avatarUrl"] as? String {
+                                        
+                                        self.avatarUrl = avtarUrls
+                                        
+                                        
+                                    }
+                                    
+                                    print(self.name!)
+                                    print(self.gender!)
+                                    print(self.birthday!)
+                                    print(self.avatarUrl!)
+                                    
+                        
+                                    Alamofire.request(self.avatarUrl!).responseImage { response in
+                                        
+                                         if let image = response.result.value {
+                                            temporaryImage = image
+                                            let wrapper = ImageWrapper(image: temporaryImage!)
+                                            try? InformationStorage?.setObject(wrapper, forKey: "avatarImg")
+                                            try? InformationStorage?.setObject(self.name, forKey: "name")
+                                            try? InformationStorage?.setObject(self.email, forKey: "email")
+                                            try? InformationStorage?.setObject(self.gender, forKey: "gender")
+                                            try? InformationStorage?.setObject(self.type, forKey: "type")
+                                            try? InformationStorage?.setObject(self.birthday, forKey: "birthday")
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            }
+                                        
+                                        
+                                        
+                                        SwiftLoader.hide()
+                                        self.performSegue(withIdentifier: "MoveToMapVC", sender: nil)
+                                        
+                                    }
+                                    
+
+                                
+                                
+                                }
+                                
+                               
+                                
+                            } )
                             
-                            SwiftLoader.hide()
-                            self.performSegue(withIdentifier: "MoveToMapVC", sender: nil)
+                            
                             
                             
                         }
@@ -290,11 +371,7 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
        
         
         
-        /*
-        print(user.profile.imageURL(withDimension: 500))
-        print(user.profile.email)
-        print(user.profile.name)
-        */
+       
         
         
     }
@@ -368,8 +445,88 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                         } else {
                             
                             
-                            SwiftLoader.hide()
-                            self.performSegue(withIdentifier: "MoveToMapVC", sender: nil)
+                            DataService.instance.UsersFacebookRef.child(userUID).observeSingleEvent(of: .value, with: { (snapData) in
+                                
+                                if let dict = snapData.value as? Dictionary<String, Any> {
+                                    
+                                    
+                                    print(dict)
+                                    
+                                    if let name = dict["Name"] as? String {
+                                        
+                                        self.name = name
+                                        
+                                    }
+                                    
+                                    if let email = dict["Email"] as? String {
+                                        
+                                        self.email = email
+                                        
+                                    }
+                                    
+                                    if let gender = dict["Gender"] as? String {
+                                        
+                                        self.gender = gender
+                                        
+                                    }
+                                    
+                                    if let type = dict["Type"] as? String {
+                                        
+                                        self.type = type
+                                        
+                                    }
+                                    if let birthday = dict["Birthday"] as? String {
+                                        
+                                        self.birthday = birthday
+                                        
+                                    }
+                                    
+                                    if let avtarUrls = dict["avatarUrl"] as? String {
+                                        
+                                        self.avatarUrl = avtarUrls
+                                        
+                                        
+                                    }
+                                    
+                                    print(self.name!)
+                                    print(self.gender!)
+                                    print(self.birthday!)
+                                    print(self.avatarUrl!)
+                                    
+                                    
+                                    Alamofire.request(self.avatarUrl!).responseImage { response in
+                                        
+                                        if let image = response.result.value {
+                                            temporaryImage = image
+                                            let wrapper = ImageWrapper(image: temporaryImage!)
+                                            try? InformationStorage?.setObject(wrapper, forKey: "avatarImg")
+                                            try? InformationStorage?.setObject(self.name, forKey: "name")
+                                            try? InformationStorage?.setObject(self.email, forKey: "email")
+                                            try? InformationStorage?.setObject(self.gender, forKey: "gender")
+                                            try? InformationStorage?.setObject(self.type, forKey: "type")
+                                            try? InformationStorage?.setObject(self.birthday, forKey: "birthday")
+                                            
+                                            
+                                            
+                                            
+                                            
+                                        }
+                                        
+                                        
+                                        
+                                        SwiftLoader.hide()
+                                        self.performSegue(withIdentifier: "MoveToMapVC", sender: nil)
+                                        
+                                    }
+                                    
+                                    
+                                    
+                                    
+                                }
+                                
+                                
+                                
+                            } )
                             
                             
                         }
@@ -491,6 +648,7 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                                                 try? InformationStorage?.setObject(self.gender, forKey: "gender")
                                                 try? InformationStorage?.setObject(self.type, forKey: "type")
                                                 try? InformationStorage?.setObject(self.birthday, forKey: "birthday")
+                                                
                                             }
                                 
                                             

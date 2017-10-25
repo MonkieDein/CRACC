@@ -23,7 +23,6 @@ class GoogleSupportVC: UIViewController {
     var type: String?
     var email: String?
     var avatarUrl: String?
-    var birthday: String?
     
    
     @IBOutlet weak var birthdayTxtField: UITextField!
@@ -75,13 +74,14 @@ class GoogleSupportVC: UIViewController {
             
             if let name = name, name != "", let email = email, email != "", let avatarUrl = avatarUrl, avatarUrl != "", let gender = gender, gender != "" {
             
+               
                 
-                let profile: Dictionary<String, AnyObject> = ["Type": self.type as AnyObject,"Birthday": self.birthday as AnyObject, "Name": self.name as AnyObject, "Email": self.email as AnyObject, "Gender": self.gender! as AnyObject, "avatarUrl": avatarUrl as AnyObject, "Stars": 0 as AnyObject,"Timestamp": ServerValue.timestamp() as AnyObject]
+                let profile: Dictionary<String, AnyObject> = ["Type": self.type as AnyObject,"Birthday": birthday as AnyObject, "Name": self.name as AnyObject, "Email": self.email as AnyObject, "Gender": self.gender! as AnyObject, "avatarUrl": avatarUrl as AnyObject, "Stars": 0 as AnyObject,"Timestamp": ServerValue.timestamp() as AnyObject]
                 
                 
                 DataService.instance.UsersRef.child("Google").child(userUID).setValue(profile)
                 DataService.instance.checkGoogleUserRef.child(userUID).setValue(["Timestamp": ServerValue.timestamp()])
-                DataService.instance.mainDataBaseRef.child("Google").child("User").child(userUID).child("Game Created").setValue(["defalut": "defaults"])
+                DataService.instance.mainDataBaseRef.child("User").child("Google").child(userUID).child("Game Created").setValue(["defalut": "defaults"])
                 DataService.instance.mainDataBaseRef.child("User").child("Google").child(userUID).child("Game Joined").setValue(["defalut": "defaults"])
                 DataService.instance.mainDataBaseRef.child("User").child("Google").child(userUID).child("Chat List").setValue(["defalut": "defaults"])
                 DataService.instance.mainDataBaseRef.child("User").child("Google").child(userUID).child("Interested List").setValue(["defalut": "defaults"])
@@ -110,7 +110,7 @@ class GoogleSupportVC: UIViewController {
                     try? InformationStorage?.setObject(self.email, forKey: "email")
                     try? InformationStorage?.setObject(self.gender, forKey: "gender")
                     try? InformationStorage?.setObject(self.type, forKey: "type")
-                    try? InformationStorage?.setObject(self.birthday, forKey: "birthday")
+                    try? InformationStorage?.setObject(birthday, forKey: "birthday")
                 }
                 
                 

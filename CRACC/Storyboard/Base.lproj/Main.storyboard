@@ -1171,7 +1171,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Community" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32D-TJ-OKQ">
-                                        <rect key="frame" x="41" y="35" width="271" height="19"/>
+                                        <rect key="frame" x="41" y="31.5" width="271" height="22.5"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1388,7 +1388,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBJ-by-iIV">
-                                                <rect key="frame" x="8" y="51" width="40" height="15"/>
+                                                <rect key="frame" x="8" y="51" width="40" height="17.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="l8U-xt-M1P"/>
                                                 </constraints>
@@ -1397,7 +1397,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib8-sH-Tfc">
-                                                <rect key="frame" x="245" y="51" width="75" height="15"/>
+                                                <rect key="frame" x="245" y="51" width="75" height="17.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="oEC-sQ-HVa"/>
                                                 </constraints>
@@ -1460,7 +1460,7 @@
                                                 <rect key="frame" x="24.5" y="16" width="272" height="132"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUs-QO-LmD">
-                                                        <rect key="frame" x="0.0" y="8" width="106" height="16"/>
+                                                        <rect key="frame" x="0.0" y="8" width="106" height="19"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="106" id="lAv-4m-0vT"/>
                                                         </constraints>
@@ -1469,7 +1469,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ct-CS-jIw">
-                                                        <rect key="frame" x="0.0" y="37" width="105" height="16"/>
+                                                        <rect key="frame" x="0.0" y="40" width="105" height="19"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="105" id="OWA-ef-4nL"/>
                                                         </constraints>
@@ -1478,7 +1478,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyl-Fw-WYN">
-                                                        <rect key="frame" x="0.0" y="66" width="105" height="16"/>
+                                                        <rect key="frame" x="0.0" y="72" width="105" height="19.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="105" id="Mys-zh-RuC"/>
                                                         </constraints>
@@ -1487,7 +1487,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October 15th, 2017" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXA-Yk-XfJ">
-                                                        <rect key="frame" x="113" y="37" width="159" height="16"/>
+                                                        <rect key="frame" x="113" y="40" width="159" height="19"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="159" id="tVl-Lh-2Xc"/>
                                                         </constraints>
@@ -1496,7 +1496,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="83 main st durham nh 03824" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4ml-m0-Xgl">
-                                                        <rect key="frame" x="113" y="66" width="159" height="34"/>
+                                                        <rect key="frame" x="113" y="72" width="159" height="37.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="159" id="C8C-kc-Pd6"/>
                                                         </constraints>
@@ -1505,7 +1505,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08 out of 11 people" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9HL-PK-D8E">
-                                                        <rect key="frame" x="113" y="107" width="159" height="16"/>
+                                                        <rect key="frame" x="113" y="116.5" width="159" height="19"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="159" id="na9-iK-CBo"/>
                                                         </constraints>
@@ -1514,7 +1514,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:30 Am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESW-Qb-Ne6">
-                                                        <rect key="frame" x="113" y="8" width="159" height="16"/>
+                                                        <rect key="frame" x="113" y="8" width="159" height="19"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="159" id="chE-UY-SiH"/>
                                                         </constraints>
@@ -1523,7 +1523,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bc3-IO-TDU">
-                                                        <rect key="frame" x="0.0" y="107" width="106" height="16"/>
+                                                        <rect key="frame" x="0.0" y="116.5" width="106" height="19"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="106" id="tgH-qX-jVe"/>
                                                         </constraints>
@@ -2029,7 +2029,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thao Vy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vQx-Dj-eNn">
-                                                <rect key="frame" x="61" y="35" width="131" height="17"/>
+                                                <rect key="frame" x="61" y="32" width="131" height="20"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2105,7 +2105,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t0-O4-ipR">
-                                                <rect key="frame" x="40" y="29" width="152" height="29"/>
+                                                <rect key="frame" x="40" y="29" width="152" height="32"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                                 <state key="normal" title="Create new game">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2115,7 +2115,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ov-zI-83Y">
-                                                <rect key="frame" x="40" y="129" width="152" height="29"/>
+                                                <rect key="frame" x="40" y="135" width="152" height="32"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                                 <state key="normal" title="Interested">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2125,7 +2125,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idu-zr-X6k">
-                                                <rect key="frame" x="40" y="178" width="152" height="29"/>
+                                                <rect key="frame" x="40" y="187" width="152" height="32"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                                 <state key="normal" title="Community">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2135,7 +2135,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlf-Mr-KiC">
-                                                <rect key="frame" x="40" y="227" width="152" height="29"/>
+                                                <rect key="frame" x="40" y="239" width="152" height="32"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                                 <state key="normal" title="Log out">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2145,7 +2145,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ci-vp-rBa">
-                                                <rect key="frame" x="40" y="80" width="152" height="29"/>
+                                                <rect key="frame" x="40" y="83" width="152" height="32"/>
                                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                                 <state key="normal" title="Information">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2544,7 +2544,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interested" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBp-9T-dyi">
-                                        <rect key="frame" x="26" y="35" width="80.5" height="19"/>
+                                        <rect key="frame" x="26" y="35" width="85" height="19"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

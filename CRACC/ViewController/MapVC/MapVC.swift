@@ -13,6 +13,9 @@ import GooglePlaces
 import Firebase
 import CameraManager
 import Cache
+import FBSDKCoreKit
+import FBSDKLoginKit
+import Google
 
 enum ControlView {
     case ProfileViewMode
@@ -159,9 +162,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(MapVC.showKeyBoard), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(MapVC.hideKeyboard), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+      //  NotificationCenter.default.addObserver(self, selector: #selector(MapVC.showKeyBoard), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+NotificationCenter.default.addObserver(self, selector: #selector(MapVC.hideKeyboard), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         
         cameraManager.resumeCaptureSession()
@@ -496,6 +498,28 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     
     @IBAction func logOutBtnPressed(_ sender: Any) {
         
+        
+        if let CachedType = try? InformationStorage?.object(ofType: String.self, forKey: "type"){
+            
+            
+            if CachedType == "Google" {
+            
+                GIDSignIn.sharedInstance().signOut()
+            
+            } else if CachedType == "facebook.com" {
+            
+                FBSDKLoginManager().logOut()
+            
+            } else {
+            
+                
+            
+            }
+            
+            
+        }
+        
+        try? InformationStorage?.removeAll()
         self.performSegue(withIdentifier: "GoBackToSignInVC", sender: nil)
         
     }
@@ -583,7 +607,7 @@ extension MapVC  {
         guard let coordinate = locationManager.location?.coordinate else { return }
         
         // get MapView
-        let camera = GMSCameraPosition.camera(withLatitude: coordinate.latitude, longitude: coordinate.longitude, zoom: 12)
+        let camera = GMSCameraPosition.camera(withLatitude: coordinate.latitude, longitude: coordinate.longitude, zoom: 13)
         
         mapView.animate(to: camera)
        
