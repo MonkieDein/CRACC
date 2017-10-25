@@ -20,7 +20,7 @@ target 'CRACC' do
         pod 'CameraManager', '~> 3.2'
         pod 'Google/SignIn'
         pod 'SwiftLoader'
-        #pod 'Firebase/Firestore'
+        pod 'Cache'
         
         
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks

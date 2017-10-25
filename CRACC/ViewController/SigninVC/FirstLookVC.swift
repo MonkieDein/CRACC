@@ -15,6 +15,7 @@ import Google
 import Alamofire
 import AlamofireImage
 import SwiftLoader
+import Cache
 
 
 //import GoogleSignIn
@@ -32,9 +33,7 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
     @IBOutlet weak var pwdTextField: UITextField!
     
-    @IBOutlet weak var width2Constraint: NSLayoutConstraint!
     
-    @IBOutlet weak var width1Constraint: NSLayoutConstraint!
     
     
     
@@ -114,7 +113,7 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     }
  
     
-    //when the signin complets
+    //when the Google signin complets
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
         //if any error stop and print the error
@@ -177,8 +176,7 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                                                 
                                                 if let image = response.result.value {
                                                     
-                                                    
-                                                    
+                                                   temporaryImage = image
                                                     let metaData = StorageMetadata()
                                                     var downloadedUrl = ""
                                                     let imageUID = UUID().uuidString
@@ -278,7 +276,7 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                         } else {
                             
                             
-                            
+                            SwiftLoader.hide()
                             self.performSegue(withIdentifier: "MoveToMapVC", sender: nil)
                             
                             
@@ -338,7 +336,6 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
             } else {
                 print("CRACC: Successfully authenticated with Facebook")
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                self.swiftLoader()
                 self.firebaseAuth(credential)
                 
             }
@@ -355,6 +352,7 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                 return
             } else {
                 if let user = user {
+                    self.swiftLoader()
                     self.type = credential.provider
                     userUID = user.uid
                     print(userUID)
@@ -428,7 +426,7 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                                     
                                     if let image = response.result.value {
                                         
-                                        
+                                        temporaryImage = image
                                         let metaData = StorageMetadata()
                                         var downloadedUrl = ""
                                         let imageUID = UUID().uuidString
@@ -463,11 +461,37 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                                             
                                         DataService.instance.UsersRef.child("Facebook").child(userUID).setValue(profile)
                                         DataService.instance.checkFacebookUserRef.child(userUID).setValue(["Timestamp": ServerValue.timestamp()])
-                                        DataService.instance.mainDataBaseRef.child("User").child(userUID).child("Game Created").setValue(["defalut": "defaults"])
-                                        DataService.instance.mainDataBaseRef.child("User").child(userUID).child("Game Joined").setValue(["defalut": "defaults"])
-                                        DataService.instance.mainDataBaseRef.child("User").child(userUID).child("Chat List").setValue(["defalut": "defaults"])
-                                        DataService.instance.mainDataBaseRef.child("User").child(userUID).child("Interested List").setValue(["defalut": "defaults"])
-                                        DataService.instance.mainDataBaseRef.child("User").child(userUID).child("Community List").setValue(["defalut": "defaults"])
+                                        DataService.instance.mainDataBaseRef.child("User").child("Facebook").child(userUID).child("Game Created").setValue(["defalut": "defaults"])
+                                        DataService.instance.mainDataBaseRef.child("User").child("Facebook").child(userUID).child("Game Joined").setValue(["defalut": "defaults"])
+                                        DataService.instance.mainDataBaseRef.child("User").child("Facebook").child(userUID).child("Chat List").setValue(["defalut": "defaults"])
+                                        DataService.instance.mainDataBaseRef.child("User").child("Facebook").child(userUID).child("Interested List").setValue(["defalut": "defaults"])
+                                        DataService.instance.mainDataBaseRef.child("User").child("Facebook").child(userUID).child("Community List").setValue(["defalut": "defaults"])
+                                            
+                                            
+                                            
+                                            if temporaryImage != nil {
+                                                
+                                                
+                                                
+                                                if try! InformationStorage?.existsObject(ofType: ImageWrapper.self, forKey: "avatarImg") != false {
+                                                    
+                                                    try? InformationStorage? .removeObject(forKey: "avatarImg")
+                                                    try? InformationStorage? .removeObject(forKey: "name")
+                                                    try? InformationStorage? .removeObject(forKey: "email")
+                                                    try? InformationStorage? .removeObject(forKey: "gender")
+                                                    try? InformationStorage? .removeObject(forKey: "birthday")
+                                                    try? InformationStorage? .removeObject(forKey: "type")
+                                                    
+                                                }
+                                                
+                                                let wrapper = ImageWrapper(image: temporaryImage!)
+                                                try? InformationStorage?.setObject(wrapper, forKey: "avatarImg")
+                                                try? InformationStorage?.setObject(self.name, forKey: "name")
+                                                try? InformationStorage?.setObject(self.email, forKey: "email")
+                                                try? InformationStorage?.setObject(self.gender, forKey: "gender")
+                                                try? InformationStorage?.setObject(self.type, forKey: "type")
+                                                try? InformationStorage?.setObject(self.birthday, forKey: "birthday")
+                                            }
                                 
                                             
                                             
@@ -476,7 +500,10 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
                                             self.performSegue(withIdentifier: "MoveToMapVC", sender: nil)
                                             
                                         
-                                        
+                                            
+                                            
+                                            
+                                            
                                             
                                             
                                             
@@ -620,7 +647,7 @@ class FirstLookVC: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
         
         config.spinnerLineWidth = 3.0
         config.foregroundColor = UIColor.black
-        config.foregroundAlpha = 0.8
+        config.foregroundAlpha = 0.7
         
         
         SwiftLoader.setConfig(config: config)

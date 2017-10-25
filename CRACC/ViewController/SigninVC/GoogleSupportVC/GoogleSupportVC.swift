@@ -10,6 +10,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Cache
 
 class GoogleSupportVC: UIViewController {
 
@@ -24,6 +25,7 @@ class GoogleSupportVC: UIViewController {
     var avatarUrl: String?
     var birthday: String?
     
+   
     @IBOutlet weak var birthdayTxtField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,11 +81,37 @@ class GoogleSupportVC: UIViewController {
                 
                 DataService.instance.UsersRef.child("Google").child(userUID).setValue(profile)
                 DataService.instance.checkGoogleUserRef.child(userUID).setValue(["Timestamp": ServerValue.timestamp()])
-                DataService.instance.mainDataBaseRef.child("User").child(userUID).child("Game Created").setValue(["defalut": "defaults"])
-                DataService.instance.mainDataBaseRef.child("User").child(userUID).child("Game Joined").setValue(["defalut": "defaults"])
-                DataService.instance.mainDataBaseRef.child("User").child(userUID).child("Chat List").setValue(["defalut": "defaults"])
-                DataService.instance.mainDataBaseRef.child("User").child(userUID).child("Interested List").setValue(["defalut": "defaults"])
-                DataService.instance.mainDataBaseRef.child("User").child(userUID).child("Community List").setValue(["defalut": "defaults"])
+                DataService.instance.mainDataBaseRef.child("Google").child("User").child(userUID).child("Game Created").setValue(["defalut": "defaults"])
+                DataService.instance.mainDataBaseRef.child("User").child("Google").child(userUID).child("Game Joined").setValue(["defalut": "defaults"])
+                DataService.instance.mainDataBaseRef.child("User").child("Google").child(userUID).child("Chat List").setValue(["defalut": "defaults"])
+                DataService.instance.mainDataBaseRef.child("User").child("Google").child(userUID).child("Interested List").setValue(["defalut": "defaults"])
+                DataService.instance.mainDataBaseRef.child("User").child("Google").child(userUID).child("Community List").setValue(["defalut": "defaults"])
+                
+                
+                if temporaryImage != nil {
+                    
+                    
+                    
+                    
+                    if try! InformationStorage?.existsObject(ofType: ImageWrapper.self, forKey: "avatarImg") != false {
+                        
+                        try? InformationStorage? .removeObject(forKey: "avatarImg")
+                        try? InformationStorage? .removeObject(forKey: "name")
+                        try? InformationStorage? .removeObject(forKey: "email")
+                        try? InformationStorage? .removeObject(forKey: "gender")
+                        try? InformationStorage? .removeObject(forKey: "birthday")
+                        try? InformationStorage? .removeObject(forKey: "type")
+                        
+                    }
+                    
+                    let wrapper = ImageWrapper(image: temporaryImage!)
+                    try? InformationStorage?.setObject(wrapper, forKey: "avatarImg")
+                    try? InformationStorage?.setObject(self.name, forKey: "name")
+                    try? InformationStorage?.setObject(self.email, forKey: "email")
+                    try? InformationStorage?.setObject(self.gender, forKey: "gender")
+                    try? InformationStorage?.setObject(self.type, forKey: "type")
+                    try? InformationStorage?.setObject(self.birthday, forKey: "birthday")
+                }
                 
                 
                 

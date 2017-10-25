@@ -8,6 +8,8 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - Cache (4.0.4):
+    - SwiftHash (~> 2.0.0)
   - CameraManager (3.2.0)
   - FBSDKCoreKit (4.27.1):
     - Bolts (~> 1.7)
@@ -115,11 +117,13 @@ PODS:
   - nanopb/encode (0.3.8)
   - Protobuf (3.4.0)
   - SidebarOverlay (4.1)
+  - SwiftHash (2.0.0)
   - SwiftLoader (0.2.5)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - AlamofireImage (~> 3.3)
+  - Cache
   - CameraManager (~> 3.2)
   - FBSDKLoginKit
   - Firebase (~> 4.2)
@@ -148,6 +152,7 @@ SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Cache: 1b3907ee2f5a457e7cfe9ac0be22dc9207f55a09
   CameraManager: 2207f57b8da175a8e4d26d405d68201ad54189a6
   FBSDKCoreKit: 03365dad5d790249196ffad8be4f6d8a2d98f932
   FBSDKLoginKit: 66ff53b73cffd967ab773e32fac39e90a60e6d46
@@ -178,8 +183,9 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
   SidebarOverlay: b65f0a1d9331ce4bf81f82eea202b21cc8655c5a
+  SwiftHash: d2e09b13495447178cdfb8e46e54a5c46f15f5a9
   SwiftLoader: 12d7a6f661f5e9a2c9a72003e7dd6162f4ff0cc4
 
-PODFILE CHECKSUM: 54db2d81a77c0bacf811e0d9caf631f7d0ae0834
+PODFILE CHECKSUM: f0678bdc3fffb1a6e62f8602f48edd44aaf6eca1
 
 COCOAPODS: 1.4.0.beta.1

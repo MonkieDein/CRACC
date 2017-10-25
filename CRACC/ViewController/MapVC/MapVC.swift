@@ -7,16 +7,34 @@
 //
 
 import UIKit
+import Foundation
 import GoogleMaps
 import GooglePlaces
 import Firebase
 import CameraManager
+import Cache
+
+enum ControlView {
+    case ProfileViewMode
+    case InformationViewMode
+    case chatViewMode
+    case Done
+}
 
 
 class MapVC: UIViewController, GMSMapViewDelegate {
     
+    
+    var ControltMode = ControlView.Done
+    
+    
     // setup orientation for camera
     
+    @IBOutlet weak var profileNameLbl: UILabel!
+    @IBOutlet weak var InformationNameLbl: UILabel!
+    @IBOutlet weak var ProfileImgView: ImageRound!
+    @IBOutlet weak var InformationImgView: RoundedImgAndBorder!
+    @IBOutlet weak var avatarImg: UIImageView!
     var orientation: String!
     
     let cameraManager = CameraManager()
@@ -88,7 +106,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     
     @IBOutlet weak var heightJoinBtn: NSLayoutConstraint!
     var marker = GMSMarker()
-    @objc var tapToUndo: UITapGestureRecognizer!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,7 +125,31 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         configureLocationServices()
         
         
+        
+        
         //blurMap()
+        
+        
+        if let CacheavatarImg = try? InformationStorage?.object(ofType: ImageWrapper.self, forKey: "avatarImg").image {
+        
+            self.avatarImg.image = CacheavatarImg
+            self.ProfileImgView.image = CacheavatarImg
+            self.InformationImgView.image = CacheavatarImg
+        
+        }
+        
+        if let CachedName = try? InformationStorage?.object(ofType: String.self, forKey: "name"){
+        
+        
+            self.profileNameLbl.text = CachedName
+            self.InformationNameLbl.text = CachedName
+        
+        
+        }
+        
+        
+        
+        
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -274,7 +316,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     
     @IBAction func chatBtnPressed(_ sender: Any) {
         
-        
+        ControltMode = .chatViewMode
         chatView.isHidden =  false
         
         blurMap()
@@ -282,8 +324,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         
         // add gesture to close when necessary
         
-        tapToUndo = UITapGestureRecognizer(target: self, action: #selector(MapVC.UndoTheMainMapActivity))
-        self.view.addGestureRecognizer(tapToUndo)
+        
     }
     
     func blurMap() {
@@ -316,33 +357,30 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     
     @objc func UndoTheMainMapActivity() {
         
-        if Done == true {
-            self.mapView.isUserInteractionEnabled = true
-            self.locationBtn.isUserInteractionEnabled = true
-            self.chatImage.isUserInteractionEnabled = true
-            self.GameManagementImage.isUserInteractionEnabled = true
-            self.profileBtn.isUserInteractionEnabled = true
-            
-            // undo blur
-            
-            self.mapView.backgroundColor = UIColor.clear
-            self.mapView.alpha = 1.0
-            self.navigationVC.alpha = 1.0
-            self.locationBtn.alpha = 1.0
-            
-            // hide unecessaryView
-            profileView.isHidden =  true
-            chatView.isHidden = true
-            InformationView.isHidden = true
-            controlGameView.isHidden = true
-            createGameView.isHidden = true
-            
-            // remove gesture
-            
-            self.view.removeGestureRecognizer(tapToUndo)
-            // stop camera session
-            cameraManager.stopCaptureSession()
-        }
+        self.mapView.isUserInteractionEnabled = true
+        self.locationBtn.isUserInteractionEnabled = true
+        self.chatImage.isUserInteractionEnabled = true
+        self.GameManagementImage.isUserInteractionEnabled = true
+        self.profileBtn.isUserInteractionEnabled = true
+        
+        // undo blur
+        
+        self.mapView.backgroundColor = UIColor.clear
+        self.mapView.alpha = 1.0
+        self.navigationVC.alpha = 1.0
+        self.locationBtn.alpha = 1.0
+        
+        // hide unecessaryView
+        profileView.isHidden =  true
+        chatView.isHidden = true
+        InformationView.isHidden = true
+        controlGameView.isHidden = true
+        createGameView.isHidden = true
+        
+        ControltMode = ControlView.Done
+        
+        // stop camera session
+        cameraManager.stopCaptureSession()
         
         view.endEditing(true)
         
@@ -363,16 +401,18 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     
         
     @IBAction func SettingBtnPressed(_ sender: Any) {
+        ControltMode = .ProfileViewMode
+        
+        
+        
+        
         profileView.isHidden =  false
      
         blurMap()
         freezeTheMapActivity()
         // add gesture to close when necessary
         
-        tapToUndo = UITapGestureRecognizer(target: self, action: #selector(MapVC.UndoTheMainMapActivity))
-        self.view.addGestureRecognizer(tapToUndo)
-        
-        
+    
         
         
     }
@@ -383,17 +423,17 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     // Profile setting btn
     @IBAction func createNewGameBtnPressed(_ sender: Any) {
         
+        
+        
         profileView.isHidden = true
         createGameView.isHidden =  false
         setupCamera()
         cameraManager.resumeCaptureSession()
         blurMap()
         freezeTheMapActivity()
+        
         // add gesture to close when necessary
-        
-        tapToUndo = UITapGestureRecognizer(target: self, action: #selector(MapVC.UndoTheMainMapActivity))
-        self.view.addGestureRecognizer(tapToUndo)
-        
+     
     }
     @IBAction func createNewGameBtn2Pressed(_ sender: Any) {
         
@@ -405,26 +445,19 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         blurMap()
         freezeTheMapActivity()
         // add gesture to close when necessary
-        
-        tapToUndo = UITapGestureRecognizer(target: self, action: #selector(MapVC.UndoTheMainMapActivity))
-        self.view.addGestureRecognizer(tapToUndo)
-        
-        
+      
     }
     
     @IBAction func InfomationBtnPressed(_ sender: Any) {
         
-        
+        ControltMode = .InformationViewMode
         profileView.isHidden = true
         InformationView.isHidden =  false
         
         blurMap()
         freezeTheMapActivity()
         // add gesture to close when necessary
-        
-        tapToUndo = UITapGestureRecognizer(target: self, action: #selector(MapVC.UndoTheMainMapActivity))
-        self.view.addGestureRecognizer(tapToUndo)
-        
+
     }
     @IBAction func InterestedBtnPressed(_ sender: Any) {
         
@@ -451,16 +484,13 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     
     @IBAction func information2Btnpressed(_ sender: Any) {
         
+        ControltMode = .InformationViewMode
         profileView.isHidden = true
         InformationView.isHidden =  false
         
         blurMap()
         freezeTheMapActivity()
         // add gesture to close when necessary
-        
-        tapToUndo = UITapGestureRecognizer(target: self, action: #selector(MapVC.UndoTheMainMapActivity))
-        self.view.addGestureRecognizer(tapToUndo)
-        
         
     }
     
@@ -473,6 +503,79 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         
         self.performSegue(withIdentifier: "GoBackToSignInVC", sender: nil)
     }
+    
+    
+    @IBAction func settingBtnPressed(_ sender: Any) {
+        
+        
+        self.performSegue(withIdentifier: "goToSettingVC", sender: nil)
+        
+        
+        
+        
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        
+        
+        super.touchesBegan(touches, with: event)
+        
+        if let touch = touches.first! as UITouch? {
+            let touchedtPoint = touch.location(in: self.view)
+            
+            switch (ControltMode) {
+                
+            case .ProfileViewMode:
+                if profileView.frame.contains(touchedtPoint) {
+                    print("Nothing")
+                
+                } else {
+                
+                    UndoTheMainMapActivity()
+                
+                }
+            case .chatViewMode:
+                if chatView.frame.contains(touchedtPoint) {
+                    print("Nothing")
+                    
+                } else {
+                    
+                    UndoTheMainMapActivity()
+                    
+                }
+            case .InformationViewMode:
+                if InformationView.frame.contains(touchedtPoint) {
+                    print("Nothing")
+                    
+                } else {
+                    
+                    UndoTheMainMapActivity()
+                    
+                }
+            default:
+                print("Done")
+            }
+        
+        
+        
+        }
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
 }
 extension MapVC  {
     func centerMapOnUserLocation() {

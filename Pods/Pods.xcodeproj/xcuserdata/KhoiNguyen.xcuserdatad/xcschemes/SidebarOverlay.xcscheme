@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D8FA8807BF1C36255F8D307BEAC6FFC"
+               BlueprintIdentifier = "041B4F67F6C39A6C34E2E7E451AD8DB0"
                BuildableName = "SidebarOverlay.framework"
                BlueprintName = "SidebarOverlay"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D8FA8807BF1C36255F8D307BEAC6FFC"
+            BlueprintIdentifier = "041B4F67F6C39A6C34E2E7E451AD8DB0"
             BuildableName = "SidebarOverlay.framework"
             BlueprintName = "SidebarOverlay"
             ReferencedContainer = "container:Pods.xcodeproj">

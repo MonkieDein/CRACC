@@ -11,6 +11,7 @@
 		6A08B6E71F9D048200D7C26D /* GoogleSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08B6E61F9D048200D7C26D /* GoogleSupportVC.swift */; };
 		6A08B6E91F9D358F00D7C26D /* signUpVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08B6E81F9D358F00D7C26D /* signUpVC3.swift */; };
 		6A08B6EB1F9D368C00D7C26D /* signUpVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08B6EA1F9D368C00D7C26D /* signUpVC2.swift */; };
+		6A08B6F41F9D950500D7C26D /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08B6F31F9D950500D7C26D /* SettingVC.swift */; };
 		6A44238E1F80D32800871E54 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A44238D1F80D32800871E54 /* RoundedView.swift */; };
 		6A44239A1F8181BB00871E54 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4423991F8181BB00871E54 /* ContainerVC.swift */; };
 		6A5C4AF71F80592C00C4591E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C4AF61F80592C00C4591E /* Constant.swift */; };
@@ -54,6 +55,7 @@
 		6A08B6E61F9D048200D7C26D /* GoogleSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSupportVC.swift; sourceTree = "<group>"; };
 		6A08B6E81F9D358F00D7C26D /* signUpVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC3.swift; sourceTree = "<group>"; };
 		6A08B6EA1F9D368C00D7C26D /* signUpVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC2.swift; sourceTree = "<group>"; };
+		6A08B6F31F9D950500D7C26D /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		6A4423861F80CFA800871E54 /* Fancyfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fancyfield.swift; sourceTree = "<group>"; };
 		6A4423881F80CFA800871E54 /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		6A44238D1F80D32800871E54 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 			path = GoogleSupportVC;
 			sourceTree = "<group>";
 		};
+		6A08B6F21F9D94DD00D7C26D /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				6A08B6F31F9D950500D7C26D /* SettingVC.swift */,
+			);
+			path = SettingVC;
+			sourceTree = "<group>";
+		};
 		6A4423841F80CFA800871E54 /* ModView */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 		6A5C4AF21F8058F800C4591E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6A08B6F21F9D94DD00D7C26D /* SettingVC */,
 				6AF4718A1F88A55300B59126 /* SigninVC */,
 				6AAAB7801F954EB900CAF307 /* cameraVC */,
 				6ADF62421F948DC70077E4EF /* InterestedVC */,
@@ -461,6 +472,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
 				"${BUILT_PRODUCTS_DIR}/CameraManager/CameraManager.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -471,6 +483,7 @@
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SidebarOverlay/SidebarOverlay.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftHash/SwiftHash.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftLoader/SwiftLoader.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -480,6 +493,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CameraManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -490,6 +504,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SidebarOverlay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLoader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -531,6 +546,7 @@
 				6AF471901F88B73700B59126 /* RoundedBtn.swift in Sources */,
 				6A44239A1F8181BB00871E54 /* ContainerVC.swift in Sources */,
 				6ACC35A01F93E8DD00B5D55A /* ModifiedCameraFrontView.swift in Sources */,
+				6A08B6F41F9D950500D7C26D /* SettingVC.swift in Sources */,
 				6AB146E01F8056B500D0D74B /* AppDelegate.swift in Sources */,
 				6AE3F9B41F904A3200B80061 /* ModifiedInformationView.swift in Sources */,
 				6AAAB7881F996B3B00CAF307 /* DataService.swift in Sources */,
